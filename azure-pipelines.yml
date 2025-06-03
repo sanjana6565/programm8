@@ -1,13 +1,11 @@
-# Maven
-# Build your Java project and run tests with Apache Maven.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+# azure-pipelines.yml
+# Java CI/CD pipeline using Maven and self-hosted agent
 
 trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: Default  # Make sure your self-hosted agent is in the "Default" pool
 
 steps:
 - task: Maven@3
